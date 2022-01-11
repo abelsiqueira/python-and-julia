@@ -15,7 +15,7 @@ WORKDIR /app
 # DEPENDENCIES
 #===========================================
 RUN apt-get update -y && \
-    apt-get install -y gcc make wget zlib1g-dev libffi-dev libssl-dev
+    apt-get install -y gcc make wget zlib1g-dev libffi-dev libssl-dev libbz2-dev
 
 # INSTALL PYTHON
 #===========================================
