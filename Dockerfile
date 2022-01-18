@@ -15,7 +15,10 @@ WORKDIR /app
 # DEPENDENCIES
 #===========================================
 RUN apt-get update -y && \
-    apt-get install -y gcc make wget zlib1g-dev libffi-dev libssl-dev libbz2-dev
+    apt-get install -y gcc make wget libffi-dev \
+        build-essential libssl-dev zlib1g-dev \
+        libbz2-dev libreadline-dev libsqlite3-dev \
+        libncurses5-dev libncursesw5-dev xz-utils
 
 # INSTALL PYTHON
 #===========================================
@@ -42,7 +45,9 @@ RUN rm -rf /app/jill.sh \
     /opt/julias/*.tar.gz \
     /app/Python-$PYTHON_VERSION.tgz
 
-RUN apt-get purge -y gcc make wget zlib1g-dev libffi-dev libssl-dev && \
+RUN apt-get purge -y gcc make wget zlib1g-dev libffi-dev libssl-dev \
+        libbz2-dev libreadline-dev \
+        libncurses5-dev libncursesw5-dev xz-utils && \
     apt-get autoremove -y
 
 CMD ["/bin/bash"]
