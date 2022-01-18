@@ -40,7 +40,7 @@ RUN wget https://raw.githubusercontent.com/abelsiqueira/jill/main/jill.sh && \
 #===========================================
 RUN rm -rf /app/jill.sh \
     /opt/julias/*.tar.gz \
-    /app/Python-3.9.9.tgz
+    /app/Python-$PYTHON_VERSION.tgz
 
 RUN apt-get purge -y gcc make wget zlib1g-dev libffi-dev libssl-dev && \
     apt-get autoremove -y
