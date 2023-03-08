@@ -1,4 +1,4 @@
-FROM ubuntu:21.10
+FROM ubuntu:22.04
 
 LABEL MAINTAINER abel.siqueira@esciencecenter.nl
 ARG PYTHON_VERSION=3.10.1
