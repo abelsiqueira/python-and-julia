@@ -1,8 +1,8 @@
 FROM ubuntu:22.04
 
 LABEL MAINTAINER abel.siqueira@esciencecenter.nl
-ARG PYTHON_VERSION=3.10.1
-ARG JULIA_VERSION=1.7.1
+ARG PYTHON_VERSION=3.10.9
+ARG JULIA_VERSION=1.8.5
 
 ENV container docker
 ENV DEBIAN_FRONTEND noninteractive
